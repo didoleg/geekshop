@@ -27,4 +27,3 @@ def basket_remove(request):
     # content = {}
     # return render(request, "basketapp/basket.html", content)
     return HttpResponseRedirect(request.META.get("HTTP_REFERER"))
-    
