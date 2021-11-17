@@ -87,4 +87,3 @@ def product(request, pk):
         "media_url": settings.MEDIA_URL,
     }
     return render(request, "mainapp/product.html", content)
-    
