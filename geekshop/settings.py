@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "w$&=$3c0zwizw(_b@+zs7pp=!+2e_kvf@(ks#weq@kqrkv$v_l"
+SECRET_KEY = "3@(__8%0**cfitmonhao8dryf-kzti-pkb#6tc!o!jwr#4-1qz"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -69,6 +69,7 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
+                "mainapp.context_processors.basket",
             ],
         },
     },
@@ -91,20 +92,24 @@ DATABASES = {
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
 
-AUTH_PASSWORD_VALIDATORS = [
-    {
-        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
-    },
-]
+if not DEBUG:
+    AUTH_PASSWORD_VALIDATORS = [
+        {
+            "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
+        },
+        {
+            "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
+        },
+        {
+            "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",
+        },
+        {
+            "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
+        },
+    ]
+else:
+    # Set simple password for debug
+    AUTH_PASSWORD_VALIDATORS = []
 
 
 # Internationalization
@@ -133,4 +138,30 @@ MEDIA_URL = "/media/"
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
+# Set login path:
+#   https://docs.djangoproject.com/en/2.2/ref/settings/#login-url
 LOGIN_URL = "authnapp:login"
+
+DOMAIN_NAME = "http://localhost:8000"
+
+# Read about sending email:
+#   https://docs.djangoproject.com/en/2.2/topics/email/
+
+# Full list of email settings:
+#   https://docs.djangoproject.com/en/2.2/ref/settings/#email
+EMAIL_HOST = "localhost"
+EMAIL_PORT = "25"
+
+EMAIL_USE_SSL = False
+# If server support TLS:
+# EMAIL_USE_TLS = True
+
+# EMAIL_HOST_USER = "django@geekshop.local"
+# EMAIL_HOST_PASSWORD = "geekshop"
+# For debugging: python -m smtpd -n -c DebuggingServer localhost:25
+EMAIL_HOST_USER = None
+EMAIL_HOST_PASSWORD = None
+
+# Email as files
+EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
+EMAIL_FILE_PATH = "tmp/email-messages/"
