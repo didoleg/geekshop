@@ -1,0 +1,14 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: 
+ =?utf-8?b?0J/QvtC00YLQstC10YDQttC00LXQvdC40LUg0YPRh9C10YLQvdC+0Lkg0LfQsNC/?=
+ =?utf-8?b?0LjRgdC4IGFkbWluXzE=?=
+From: webmaster@localhost
+To: admin@mail.ru
+Date: Mon, 29 Nov 2021 13:16:02 -0000
+Message-ID: <163819176244.19866.17330955994411124006@django>
+
+Для подтверждения учетной записи admin_1     на портале http://localhost:8000 перейдите по ссылке:     
+http://localhost:8000/auth/verify/admin@mail.ru/ef91b02c15ebb0c1d20498d0e8a768f08c121c96/
+-------------------------------------------------------------------------------
