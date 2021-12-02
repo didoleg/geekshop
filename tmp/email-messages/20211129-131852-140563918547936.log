@@ -1,0 +1,14 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: 
+ =?utf-8?b?0J/QvtC00YLQstC10YDQttC00LXQvdC40LUg0YPRh9C10YLQvdC+0Lkg0LfQsNC/?=
+ =?utf-8?b?0LjRgdC4IHRlc3Q=?=
+From: webmaster@localhost
+To: test@ya.ru
+Date: Mon, 29 Nov 2021 13:18:52 -0000
+Message-ID: <163819193287.19866.16137303806109663816@django>
+
+Для подтверждения учетной записи test     на портале http://localhost:8000 перейдите по ссылке:     
+http://localhost:8000/auth/verify/test@ya.ru/22218db84d7cca32b3c5d7d908211804fe5b9152/
+-------------------------------------------------------------------------------
