@@ -113,5 +113,3 @@ def order_forming_complete(request, pk):
     order.save()
 
     return HttpResponseRedirect(reverse("ordersapp:orders_list"))
-
-    
