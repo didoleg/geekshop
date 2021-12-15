@@ -1,0 +1,4 @@
+X#7MjfpupwWm
+80.78.241.254
+
+sftp://root:X#7MjfpupwWm@80.78.241.254
